@@ -7,7 +7,7 @@
 	if ( typeof define === "function" && define.amd ) {
 
 		// AMD. Register as an anonymous module.
-		define([ "jquery" ], factory );
+		define([ "foodCourt/static/js/jquery" ], factory );
 	} else {
 
 		// Browser globals
