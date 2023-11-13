@@ -9,7 +9,7 @@
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Make globaly available as well
-        define(['moment', 'foodCourt/static/js/jquery'], function (moment, jquery) {
+        define(['moment', 'jquery'], function (moment, jquery) {
             return (root.daterangepicker = factory(moment, jquery));
         });
     } else if (typeof module === 'object' && module.exports) {
@@ -17,7 +17,7 @@
         //isomorphic issue
         var jQuery = (typeof window != 'undefined') ? window.jQuery : undefined;
         if (!jQuery) {
-            jQuery = require('foodCourt/static/js/jquery');
+            jQuery = require('jquery');
             if (!jQuery.fn) jQuery.fn = {};
         }
         module.exports = factory(require('moment'), jQuery);
